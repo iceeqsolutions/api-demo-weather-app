@@ -8,4 +8,60 @@
     background-image: url(./img/raindrop.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    color: #fff;
+  }
+
+  .searchAPI {
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(223, 223, 223, 0.2);
+    height: 100px;
+    margin: 50px 0;
+  }
+  
+  #searchLocation {
+    height: 50px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: rgba(23, 23, 23, 0.2);
+  }
+  
+  body,
+  .searchAPI,
+  #pageContent,
+  .mainContent,
+  .dateTimeLocationContainer,
+  .dailyWeatherForecastContainer,
+  .currentMiscWeatherItemsContainer,
+  .hourlyForecastContainer,
+  .hourlyForecastContent,
+  .ics-container {
+    display: flex;
+  }
+  
+  body,
+  #pageContent,
+  .dateTimeLocationContainer,
+  .dailyWeatherForecastContainer,
+  .currentMiscWeatherItemsContainer {
+    flex-direction: column;
+  }
+  
+  .ics-container {
+    justify-content: end;
+    align-items: center;
+    gap: 5px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .ics-img {
+    height: 25px;
+  }
+  
+  .ics-p {
+    color: #fff;
+    font-family: "Chillax";
+    font-style: italic;
   }
