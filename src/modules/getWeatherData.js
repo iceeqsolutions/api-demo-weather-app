@@ -1,5 +1,6 @@
 import currentTimeAndTemperature from "./currentTimeAndTemperature";
 import dailyWeatherForecast from "./threeDayForecast";
+import currentMiscItems from "./currentMiscWeatherItems";
 
 async function getData(location) {
   const KEY = process.env.API_KEY;
@@ -14,6 +15,7 @@ async function getData(location) {
 
     currentTimeAndTemperature(json);
     dailyWeatherForecast(json);
+    currentMiscItems(json);
   } catch (error) {
     console.log(error.message);
   }
