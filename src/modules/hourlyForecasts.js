@@ -1,3 +1,4 @@
+import icsStatement from "./icsDemoFootnote";
 const container = document.querySelector("#pageContent");
 
 function hourlyForecasts(json) {
@@ -44,6 +45,7 @@ function hourlyForecasts(json) {
 
   hourlyForecastContainer.appendChild(hourlyForecastContent);
   container.appendChild(hourlyForecastContainer);
+  container.appendChild(icsStatement());
 }
 
 export default hourlyForecasts;
