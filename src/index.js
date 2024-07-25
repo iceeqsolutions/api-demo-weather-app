@@ -3,12 +3,18 @@ import getData from "./modules/getWeatherData";
 
 const mainContent = document.querySelector(".mainContent");
 const searchBar = document.querySelector("#searchLocation");
+const hourlyData = document.querySelector(
+    "#pageContent>.hourlyForecastContainer"
+  );
 let newLocation;
 
 // Initialize page
 function loadPage() {
     while (mainContent.firstChild) {
       mainContent.removeChild(mainContent.firstChild);
+    }
+    if (hourlyData) {
+        container.remove(hourlyData);
     }
     getData("helsinki");
   }
@@ -35,10 +41,19 @@ function recordKey(evt) {
 
 function updateLocation() {
   const mainContent = document.querySelector(".mainContent");
+  const hourlyData = document.querySelector(
+    "#pageContent>.hourlyForecastContainer"
+  );
 
   const ics = document.querySelector(".ics-container");
   while (mainContent.firstChild) {
     mainContent.removeChild(mainContent.firstChild);
+  }
+  if (hourlyData) {
+    hourlyData.remove();
+  }
+  if (ics) {
+    ics.remove();
   }
 
   const location = newLocation ? newLocation : "helsinki";
