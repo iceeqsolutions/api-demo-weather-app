@@ -16,7 +16,7 @@ In order to boost page performance, we've used Webpack, which automatically comp
 
 ## Demo
 
-👁️ [Live Demo](https://test.com)
+👁️ [Live Demo](https://iceeqsolutions.github.io/api-demo-weather-app/)
 
 ## Built with
 
